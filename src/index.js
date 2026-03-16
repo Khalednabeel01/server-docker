@@ -23,9 +23,8 @@ mongoose.connect(URI)
 
 app.get('/', (req, res) => {
   redisclient.set('greeting', 'Hello from Redis!');
-  res.send('Hello World! Everyone! How are you doing? ya allah ')
+  res.send('Hello World! Everyone! How are you doing? welecome to aws docker course');
 });
-
 
 app.get('/data', async (req, res) => {
   const greeting = await redisclient.get('greeting');
