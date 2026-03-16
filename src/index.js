@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 app.get('/data', async (req, res) => {
   const greeting = await redisclient.get('greeting');
-  res.send(`Hello World! Everyone! How are you doing? ya allah <h2>${greeting}</h2>`);
+  res.send(`Hello World! Everyone! How are you doing? <h2>${greeting}</h2>`);
 });
 
 app.listen(port, () => {
